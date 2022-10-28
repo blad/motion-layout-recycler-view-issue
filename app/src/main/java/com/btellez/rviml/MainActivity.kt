@@ -3,22 +3,25 @@ package com.btellez.rviml
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         configure(
-            rv = findViewById<RecyclerView>(R.id.recycler_view_vertical),
+            rv = findViewById(R.id.recycler_view_vertical),
             horizontal = false
         )
 
         configure(
-            rv = findViewById<RecyclerView>(R.id.recycler_view_horizontal),
+            rv = findViewById(R.id.recycler_view_horizontal),
             horizontal = true
         )
     }

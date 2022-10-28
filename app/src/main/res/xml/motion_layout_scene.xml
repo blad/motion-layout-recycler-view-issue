@@ -80,6 +80,7 @@
         motion:constraintSetStart="@+id/start">
 
         <OnSwipe
+            app:dragScale=".25"
             app:touchAnchorId="@id/recycler_view_horizontal"
             motion:dragDirection="dragUp"
             motion:onTouchUp="stop" />
