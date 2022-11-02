@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
+import android.view.TouchDelegate
 import android.view.View
+import android.view.View.OnTouchListener
 import android.view.ViewGroup
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         rv.adapter = adapter
         val orientation = if (horizontal) RecyclerView.HORIZONTAL else RecyclerView.VERTICAL
+        rv.enforceSingleScrollDirection()
         rv.layoutManager = LinearLayoutManager(this, orientation, false)
         return rv
     }
