@@ -18,12 +18,19 @@
         android:textAlignment="center"
         android:textSize="20sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/recycler_view_horizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:itemCount="1"
-        tools:listitem="@layout/row_single_item_horizontal" />
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_horizontal_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="1"
+            tools:listitem="@layout/row_single_item_horizontal" />
+    </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/vertical_title_text_view"

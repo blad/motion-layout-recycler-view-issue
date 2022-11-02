@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         configure(
-            rv = findViewById(R.id.recycler_view_horizontal),
+            rv = findViewById(R.id.recycler_view_horizontal_view),
             horizontal = true
         )
     }
